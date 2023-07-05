@@ -131,11 +131,11 @@ Request Again"""
 𝖨 𝖼𝗈𝗎𝗅𝖽𝗇'𝗍 𝖿𝗂𝗇𝖽 𝖺𝗇𝗒𝗍𝗁𝗂𝗇𝗀 𝗋𝖾𝗅𝖺𝗍𝖾𝖽 𝗍𝗈 𝗍𝗁𝖺𝗍.
 𝖣𝗂𝖽 𝗒𝗈𝗎 𝗆𝖾𝖺𝗇 𝖺𝗇𝗒 𝗈𝖿 𝗍𝗁𝖾𝗌𝖾 ?</i></b>"""
 
-    I_CUDNT = """<b>ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀꜱᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴅᴀᴛᴀʙᴀꜱᴇ</b>\n\n‼ <b><i>𝖱𝖾𝗉𝗈𝗋𝗍 𝗍𝗈 𝖺𝖽𝗆𝗂𝗇 ▶ <a href=https://t.me/Srikanth_Official_Bot>𝗠𝗿.𝗦𝗿𝗶𝗸𝗮𝗻𝘁𝗵</a></i></b>"""
+    I_CUDNT = """<b>ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀꜱᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀꜱᴇ</b>\n\n‼ <b>𝖱𝖾𝗉𝗈𝗋𝗍 𝗍𝗈 𝖺𝖽𝗆𝗂𝗇 ▶ <a href=https://t.me/Srikanth_Official_Bot>𝗠𝗿.𝗦𝗿𝗶𝗸𝗮𝗻𝘁𝗵</a></b>"""
 
-    I_CUD_NT = """<b>ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀꜱᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴅᴀᴛᴀʙᴀꜱᴇ</b>\n\n‼ <b><i>𝖱𝖾𝗉𝗈𝗋𝗍 𝗍𝗈 𝖺𝖽𝗆𝗂𝗇 ▶ <a href=https://t.me/Srikanth_Official_Bot>𝗠𝗿.𝗦𝗿𝗶𝗸𝗮𝗻𝘁𝗵</a></i></b>"""
+    I_CUD_NT = """<b>ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀꜱᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀꜱᴇ</b>\n\n‼ <b>𝖱𝖾𝗉𝗈𝗋𝗍 𝗍𝗈 𝖺𝖽𝗆𝗂𝗇 ▶ <a href=https://t.me/Srikanth_Official_Bot>𝗠𝗿.𝗦𝗿𝗶𝗸𝗮𝗻𝘁𝗵</a></b>"""
 
-    MVE_NT_FND = """<b>ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀꜱᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴅᴀᴛᴀʙᴀꜱᴇ</b>\n\n‼ <b><i>𝖱𝖾𝗉𝗈𝗋𝗍 𝗍𝗈 𝖺𝖽𝗆𝗂𝗇 ▶ <a href=https://t.me/Srikanth_Official_Bot>𝗠𝗿.𝗦𝗿𝗶𝗸𝗮𝗻𝘁𝗵</a></i></b>"""
+    MVE_NT_FND = """<b>ᴛʜɪꜱ ᴍᴏᴠɪᴇ ɪꜱ ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀꜱᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀꜱᴇ</b>\n\n‼ <b>𝖱𝖾𝗉𝗈𝗋𝗍 𝗍𝗈 𝖺𝖽𝗆𝗂𝗇 ▶ <a href=https://t.me/Srikanth_Official_Bot>𝗠𝗿.𝗦𝗿𝗶𝗸𝗮𝗻𝘁𝗵</a></b>"""
 
     TOP_ALRT_MSG = """𝖢𝗁𝖾𝖼𝗄𝗂𝗇𝗀 𝖿𝗈𝗋 𝗊𝗎𝖾𝗋𝗒 𝗂𝗇 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾..."""
 
@@ -176,7 +176,7 @@ Message <b>: {}</b>"""
     CAPTION = """
 📂 <b>File Name</b>: <code>{file_name}</code> 
 
-❤️‍🔥 </b>Join</b> [𝗕𝗟𝗔𝗦𝗧𝗘𝗥 𝗟𝗜𝗡𝗞𝗭](https://t.me/blaster_linkz)  
+❤️‍🔥 </b>Join</b> [𝗚𝗠𝗢𝗿𝗶𝗴𝗶𝗻𝗮𝗹𝘀](https://t.me/GMOriginals)  
 """
 
     IMDB_TEMPLATE_TXT = """
@@ -184,7 +184,7 @@ Message <b>: {}</b>"""
 🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10  
 🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} 
 
-🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [[𝖯𝖨𝖱𝖮]](t.me/piroxbots)"""
+🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [[𝗚𝗠𝗢𝗿𝗶𝗴𝗶𝗻𝗮𝗹𝘀]](t.me/GMOriginals)"""
     
     ALL_FILTERS = """
 <b>Hᴇʏ {}, Tʜᴇsᴇ ᴀʀᴇ ᴍʏ ᴛʜʀᴇᴇ ᴛʏᴘᴇs ᴏғ ғɪʟᴛᴇʀs.</b>"""
