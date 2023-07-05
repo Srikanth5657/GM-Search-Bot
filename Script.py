@@ -1,7 +1,7 @@
 class script(object):
     START_TXT = """👋 𝙷𝙴𝙻𝙾 {} 💖
     
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/Srikanth_Official_Bot>𝗠𝗿.𝗦𝗿𝗶𝗸𝗮𝗻𝘁𝗵</a>,
+𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/GMSearchBot>𝗚𝗠 𝗦𝗘𝗔𝗥𝗖𝗛 𝗕𝗢𝗧</a>,
 𝙸 𝙲𝙰𝙽 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙼𝙾𝚅𝙸𝙴𝚂, 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝙼𝙰𝙺𝙴 𝙼𝙴 𝙰𝙳𝙼𝙸𝙽..."""
 
     HELP_TXT = """𝙷𝙴𝚈 {} ❤️
