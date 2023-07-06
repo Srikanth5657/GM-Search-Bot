@@ -27,9 +27,6 @@ async def start(client, message):
             InlineKeyboardButton('♻️ 𝙷𝙴𝙻𝙿 ♻️', url=f"https://t.me/{temp.U_NAME}?start=help")
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_chat_action(enums.ChatAction.TYPING)
-        await asyncio.sleep(1)
-        await m.delete()
         await message.reply(script.START_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
         await asyncio.sleep(2)
         if not await db.get_chat(message.chat.id):
