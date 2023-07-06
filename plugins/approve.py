@@ -25,4 +25,3 @@ async def accept_request(client, r):
     except Exception as e:
         print(f"#Error\n{str(e)}")
 
-    await r.approve()
