@@ -1263,29 +1263,34 @@ async def auto_filter(client, msg, spoll=False):
     req = message.from_user.id if message.from_user else 0
     BUTTONS[key] = search
     
-    if settings["button"]:
+    if settings["shortlink"]:
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}]{file.file_name}", callback_data=f'{pre}#{file.file_id}'
-                ),
+                    text=f"[{get_size(file.file_size)}]{file.file_name}", url=await get_shortlink(message.chat.id, f'https://t.me/{temp.U_NAME}?start={pre}_{message.chat.id}_{file.file_id}')
+                )
             ]
             for file in files
         ]
+        btn.insert(0,
+                  [
+                      InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/GeethaMovies')
+                  ]
+        )
     else:
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{file.file_name}",
-                    callback_data=f'{pre}#{file.file_id}',
-                ),
-                InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
-                    callback_data=f'{pre}#{file.file_id}',
-                ),
+                    text=f"[{get_size(file.file_size)}]{file.file_name}", callback_data=f'{pre}#{file.file_id}',
+                )
             ]
             for file in files
         ]
+        btn.insert(0,
+                  [
+                      InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://telegram.me/GeethaMovies')
+                  ]
+        )
             
     
     if offset != "":
