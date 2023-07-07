@@ -102,7 +102,6 @@ async def next_page(bot, query):
             ]
             for file in files
         ]
-    
     else:
         btn = [
             [
@@ -1239,11 +1238,12 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
         settings = await get_settings(msg.message.chat.id)
-        key = f"{message.chat.id}-{message.id}"
-        temp.FILES_IDS[key] = files
-        pre = 'filep' if settings['file_secure'] else 'file'
-        req = message.from_user.id if message.from_user else 0
-        BUTTONS[key] = search
+        
+    key = f"{message.chat.id}-{message.id}"
+    temp.FILES_IDS[key] = files
+    pre = 'filep' if settings['file_secure'] else 'file'
+    req = message.from_user.id if message.from_user else 0
+    BUTTONS[key] = search
     
     if settings["button"]:
         btn = [
