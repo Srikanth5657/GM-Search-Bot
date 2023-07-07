@@ -655,6 +655,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                          callback_data=f'setgs#auto_ffilter#{settings["auto_ffilter"]}#{str(grp_id)}')
                 ],
                 [
+                    InlineKeyboardButton('Shortlink', callback_data=f'setgs#shortlink#{settings["shortlink"]}#{str(grp_id)}'),
+                    InlineKeyboardButton('✅ Yes' if settings["shortlink"] else '❌ No',
+                                         callback_data=f'setgs#shortlink#{settings["shortlink"]}#{str(grp_id)}')
+                ], 
+                [
                     InlineKeyboardButton('𝖬𝖺𝗑 𝖡𝗎𝗍𝗍𝗈𝗇𝗌',
                                          callback_data=f'setgs#max_btn#{settings["max_btn"]}#{str(grp_id)}'),
                     InlineKeyboardButton('10' if settings["max_btn"] else f'{MAX_B_TN}',
@@ -735,6 +740,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('✅ 𝖮𝗇' if settings["auto_ffilter"] else '❌ 𝖮𝖿𝖿',
                                          callback_data=f'setgs#auto_ffilter#{settings["auto_ffilter"]}#{str(grp_id)}')
                 ],
+                [
+                    InlineKeyboardButton('Shortlink', callback_data=f'setgs#shortlink#{settings["shortlink"]}#{str(grp_id)}'),
+                    InlineKeyboardButton('✅ Yes' if settings["shortlink"] else '❌ No',
+                                         callback_data=f'setgs#shortlink#{settings["shortlink"]}#{str(grp_id)}')
+                ], 
                 [
                     InlineKeyboardButton('𝖬𝖺𝗑 𝖡𝗎𝗍𝗍𝗈𝗇𝗌',
                                          callback_data=f'setgs#max_btn#{settings["max_btn"]}#{str(grp_id)}'),
@@ -1220,6 +1230,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('✅ 𝖮𝗇' if settings["auto_ffilter"] else '❌ 𝖮𝖿𝖿',
                                          callback_data=f'setgs#auto_ffilter#{settings["auto_ffilter"]}#{str(grp_id)}')
                 ],
+                [
+                    InlineKeyboardButton('Shortlink', callback_data=f'setgs#shortlink#{settings["shortlink"]}#{str(grp_id)}'),
+                    InlineKeyboardButton('✅ Yes' if settings["shortlink"] else '❌ No',
+                                         callback_data=f'setgs#shortlink#{settings["shortlink"]}#{str(grp_id)}')
+                ], 
                 [
                     InlineKeyboardButton('𝖬𝖺𝗑 𝖡𝗎𝗍𝗍𝗈𝗇𝗌',
                                          callback_data=f'setgs#max_btn#{settings["max_btn"]}#{str(grp_id)}'),
