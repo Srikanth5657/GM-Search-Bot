@@ -94,7 +94,8 @@ async def next_page(bot, query):
     pre = 'filep' if settings['file_secure'] else 'file'
     temp.FILES_IDS[key] = files
     if settings['button']:
-        btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
+        btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'pmfile#{file.file_id}'),
+                InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
     
     else:
         btn = [
@@ -1240,7 +1241,8 @@ async def auto_filter(client, msg, spoll=False):
     BUTTONS[key] = search
     
     if settings["button"]:
-        btn = [[InlineKeyboardButton(text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
+        btn = [[InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'pmfile#{file.file_id}'),
+                InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'pmfile#{file.file_id}')] for file in files ]
     else:
         btn = [
             [
