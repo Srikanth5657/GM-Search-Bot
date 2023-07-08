@@ -93,7 +93,7 @@ async def next_page(bot, query):
     settings = await get_settings(query.message.chat.id)
     pre = 'filep' if settings['file_secure'] else 'file'
     temp.FILES_IDS[key] = files
-    if settings['button']:
+    if settings['get_shortlink']:
         btn = [
             [
                 InlineKeyboardButton(
@@ -1278,7 +1278,7 @@ async def auto_filter(client, msg, spoll=False):
     req = message.from_user.id if message.from_user else 0
     BUTTONS[key] = search
     
-    if settings['button']:
+    if settings['get_shortlink']:
         btn = [
             [
                 InlineKeyboardButton(
