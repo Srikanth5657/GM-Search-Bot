@@ -9,6 +9,7 @@ from typing import Union
 import random 
 import re
 import os
+import aiohttp
 from datetime import datetime
 from typing import List
 from database.users_chats_db import db
@@ -196,6 +197,26 @@ async def save_group_settings(group_id, key, value):
     current[key] = value
     temp.SETTINGS[group_id] = current
     await db.update_settings(group_id, current)
+
+async def get_shortlink(link):
+
+    url = f'{SHORT_URL}/api'
+    params = {
+      'api': SHORT_API,
+      'url': link,
+    }
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                data = await response.json()
+                if data["status"] == "success":
+                    return data['shortenedUrl']
+                else:
+                    logger.error(f"Error: {data['message']}")
+                    return link
+    except Exception as e:
+        logger.error(e)
+        return link
     
 def get_size(size):
     """Get size in readable format"""
