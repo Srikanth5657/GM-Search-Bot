@@ -29,7 +29,7 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 BOT_START_TIME = time()
 
 # url shortner
-SHORT_URL = environ.get("SHORT_URL", "https://omegalinks.in")
+SHORT_URL = environ.get("SHORT_URL", "omegalinks.in")
 SHORT_API = environ.get("SHORT_API", "ccfa287d222b9d943922057dec4bf5091d6446ad")
 
 # Bot images & videos
