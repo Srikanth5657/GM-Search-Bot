@@ -1423,19 +1423,7 @@ async def advantage_spell_chok(client, msg):
         await asyncio.sleep(30)
         await k.delete()
         return
-    movielist += [movie.get('title') for movie in movies]
-    movielist += [f"{movie.get('title')} {movie.get('year')}" for movie in movies]
-    key=f"{msg.chat.id}-{msg.id}"
-    temp.SPELL_CHECK[key] = movielist
-    btn = [
-        [
-            InlineKeyboardButton(
-                text=movie_name.strip(),
-                callback_data=f"spol#{reqstr1}#{k}#{key}",
-            )
-        ]
-        for k, movie_name in enumerate(movielist)
-    ]
+    movielist = []
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spol#{reqstr1}#close_spellcheck#{key}')])
     spell_check_del = await msg.reply_photo(
         photo=(SPELL_IMG),
