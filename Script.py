@@ -140,17 +140,17 @@ Request Again"""
     TOP_ALRT_MSG = """𝖢𝗁𝖾𝖼𝗄𝗂𝗇𝗀 𝖿𝗈𝗋 𝗊𝗎𝖾𝗋𝗒 𝗂𝗇 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾..."""
 
     MELCOW_ENG = """<b>Hey {}, 
-    Welcome to {}</b> 
+Welcome to {}</b> 
 
 <u>𝗥𝗲𝗾𝘂𝗲𝘀𝘁𝘀 𝗙𝗼𝗿𝗺𝗮𝘁𝘀</u>
 
-👉 For Movies Type Movie Name Year
-Ex : Kantara 2022
-       Dasara 2023
+<b>👉 For Movies Type Movie Name Year
+Ex :  Kantara 2022
+      Dasara 2023
 
 👉 For Series Just Type Series Name With Season Number 
-Ex : Peaky Blinders S01
-        Breaking Bad S05"""
+Ex :  Peaky Blinders S01
+      Breaking Bad S05 </b>"""
 
     OWNER_INFO = """
 ○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/Srikanth_Official_Bot'>THIS PERSION</a>
