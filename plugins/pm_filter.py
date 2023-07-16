@@ -1394,65 +1394,62 @@ async def advantage_spell_chok(client, msg):
         logger.exception(e)
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-                   InlineKeyboardButton("🔎 𝖦𝗈𝗈𝗀𝗅𝖾", url=f"https://www.google.com/search?q={reqst_gle}")
+        InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ​ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")            
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply_photo(
-            photo=SPELL_IMG, 
-            caption=script.I_CUDNT.format(mv_rqst),
-            reply_markup=InlineKeyboardMarkup(button)
+  
+        k = await msg.reply_text(
+            text=("<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ\n\nᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ !!</b>"),
+            reply_markup=InlineKeyboardMarkup(button),
+            reply_to_message_id=msg.id
         )
-        await asyncio.sleep(30)
-        await k.delete()
+        await asyncio.sleep(40)
+        await k.delete()      
         return
     movielist = []
-    
     if not movies:
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
-                   InlineKeyboardButton("🔎 𝖦𝗈𝗈𝗀𝗅𝖾", url=f"https://www.google.com/search?q={reqst_gle}")
+        InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ​ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")   
         ]]
         if NO_RESULTS_MSG:
             await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)))
-        k = await msg.reply_photo(
-            photo=SPELL_IMG, 
-            caption=script.I_CUDNT.format(mv_rqst),
-            reply_markup=InlineKeyboardMarkup(button)
+        k = await msg.reply_text(
+            text=("<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ\n\nᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ !!</b>"),
+            reply_markup=InlineKeyboardMarkup(button),
+            reply_to_message_id=msg.id
         )
-        await asyncio.sleep(30)
+        await asyncio.sleep(40)
         await k.delete()
         return
-    movielist += [movie.get('title') for movie in movies]
-    movielist += [f"{movie.get('title')} {movie.get('year')}" for movie in movies]
-    key=f"{msg.chat.id}-{msg.id}"
-    temp.SPELL_CHECK[key] = movielist
+    movielist = [movie.get('title') for movie in movies]
+    SPELL_CHECK[mv_id] = movielist
     btn = [
         [
             InlineKeyboardButton(
                 text=movie_name.strip(),
-                callback_data=f"spol#{reqstr1}#{k}#{key}",
+                callback_data=f"spol#{reqstr1}#{k}",
             )
         ]
         for k, movie_name in enumerate(movielist)
     ]
-    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spol#{reqstr1}#close_spellcheck#{key}')])
-    spell_check_del = await msg.reply_photo(
-        photo=(SPELL_IMG),
-        caption=(script.CUDNT_FND.format(mv_rqst)),
-        reply_markup=InlineKeyboardMarkup(btn)
+    btn.append([InlineKeyboardButton(text="✘ ᴄʟᴏsᴇ ✘", callback_data=f'spol#{reqstr1}#close_spellcheck')])
+    spell_check_del = await msg.reply_text(
+        text=(script.CUDNT_FND.format(mv_rqst)),
+        reply_markup=InlineKeyboardMarkup(btn),
+        reply_to_message_id=msg.id
     )
-    
     try:
         if settings['auto_delete']:
-            await asyncio.sleep(600)
+            await asyncio.sleep(120)
             await spell_check_del.delete()
     except KeyError:
             grpid = await active_connection(str(message.from_user.id))
             await save_group_settings(grpid, 'auto_delete', True)
             settings = await get_settings(message.chat.id)
             if settings['auto_delete']:
-                await asyncio.sleep(600)
+                await asyncio.sleep(120)
                 await spell_check_del.delete()
 
 
