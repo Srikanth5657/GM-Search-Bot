@@ -150,7 +150,7 @@ Ex :  Kantara 2022
 
 👉 For Series Just Type Series Name With Season Number 
 Ex :  Peaky Blinders S01
-       Breaking Bad S05 </b>"""
+       Breaking Bad S05 </b>"""
 
     OWNER_INFO = """
 ○ 𝖢𝗋𝖾𝖺𝗍𝗈𝗋 : <a href='https://t.me/Srikanth_Official_Bot'>THIS PERSION</a>
