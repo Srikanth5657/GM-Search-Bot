@@ -54,7 +54,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                                                 text=f"Hai (u.mention, message.chat.title)) Welcome To",
+                                                 text=f"Hai {user}\nwelcome to {chat}",
                                                  reply_markup=InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('Support', url=f"https://t.me/{SUPPORT_CHAT}"),
