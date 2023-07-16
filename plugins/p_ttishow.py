@@ -54,15 +54,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_text(
-                                                 text=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
-                                                 reply_markup=InlineKeyboardMarkup(
-        [[
-            InlineKeyboardButton('Support', url=f"https://t.me/{SUPPORT_CHAT}"),
-            InlineKeyboardButton('Groups', url=f"https://t.me/GM_GROUPS")
-        ]]
-                                                 ),
-                                                 parse_mode=enums.ParseMode.HTML
-                )
+                                                 text=(script.MELCOW_ENG.format(u.mention, message.chat.title))
                 
         if settings["auto_delete"]:
             await asyncio.sleep(300)
