@@ -53,9 +53,8 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply_video(
-                                                 video=(MELCOW_VID),
-                                                 caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
+                temp.MELCOW['welcome'] = await message.reply_text(
+                                                 text=f"Hai (u.mention, message.chat.title)) Welcome To",
                                                  reply_markup=InlineKeyboardMarkup(
         [[
             InlineKeyboardButton('Support', url=f"https://t.me/{SUPPORT_CHAT}"),
