@@ -1333,7 +1333,7 @@ async def auto_filter(client, msg, spoll=False):
             hmm = await message.reply_photo(photo=poster, caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
             try:
                 if settings['auto_delete']:
-                    await asyncio.sleep(600)
+                    await asyncio.sleep(30)
                     await hmm.delete()
                     await message.delete()
             except KeyError:
@@ -1349,7 +1349,7 @@ async def auto_filter(client, msg, spoll=False):
             fek = await message.reply_text(cap, reply_markup=InlineKeyboardMarkup(btn))
             try:
                 if settings['auto_delete']:
-                    await asyncio.sleep(600)
+                    await asyncio.sleep(30)
                     await fek.delete()
                     await message.delete()
             except KeyError:
