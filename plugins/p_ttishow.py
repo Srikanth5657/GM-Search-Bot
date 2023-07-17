@@ -37,11 +37,12 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴', url=f"https://t.me/GeethaMovies")
+            InlineKeyboardButton('Support', url=f"https://t.me/{SUPPORT_CHAT}"),
+            InlineKeyboardButton('Groups', url=f"https://t.me/GM_GROUPS")
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>›› 𝚃𝙷𝙰𝙽𝙺𝚈𝙾𝚄 𝙵𝙾𝚁 𝙰𝙳𝙳𝙸𝙽𝙶 𝙼𝙴 𝙸𝙽 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ❣️\n\n›› 𝙳𝙾𝙽'𝚃 𝙵𝙾𝚁𝙶𝙴𝚃 𝚃𝙾 𝙼𝙰𝙺𝙴 𝙼𝙴 𝙰𝙳𝙼𝙸𝙽.\n›› 𝙸𝙵 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙰𝙽𝚈 𝙳𝙾𝚄𝙱𝚃𝚂 𝙰𝙱𝙾𝚄𝚃 𝚄𝚂𝙸𝙽𝙶 𝙼𝙴 𝙲𝙻𝙸𝙲𝙺 𝙱𝙴𝙻𝙾𝚆 𝙱𝚄𝚃𝚃𝙾𝙽..⚡⚡.</b>",
+            text=f"<b>›› 𝚃𝙷𝙰𝙽𝙺𝚈𝙾𝚄 𝙵𝙾𝚁 𝙰𝙳𝙳𝙸𝙽𝙶 𝙼𝙴 𝙸𝙽 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ❣️\n\n›› 𝙳𝙾𝙽'𝚃 𝙵𝙾𝚁𝙶𝙴𝚃 𝚃𝙾 𝙼𝙰𝙺𝙴 𝙼𝙴 𝙰𝙳𝙼𝙸𝙽.\n›› 𝙸𝙵 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙰𝙽𝚈 𝙳𝙾𝚄𝙱𝚃𝚂 𝙰𝙱𝙾𝚄𝚃 𝚄𝚂𝙸𝙽𝙶 𝙼𝙴. 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝚂𝚄𝙿𝙿𝙾𝚁𝚃 𝙶𝚁𝙾𝚄𝙿..⚡️⚡️.</b>",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
@@ -52,19 +53,12 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply_video(
-                                                 video=(MELCOW_VID),
-                                                 caption=(script.MELCOW_ENG.format(u.mention, message.chat.title)),
-                                                 reply_markup=InlineKeyboardMarkup(
-        [[
-            InlineKeyboardButton('𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴', url=f"https://t.me/GeethaMovies")
-        ]]
-                                                 ),
-                                                 parse_mode=enums.ParseMode.HTML
+                temp.MELCOW['welcome'] = await message.reply_text(
+                                                 text=(script.MELCOW_ENG.format(u.mention, message.chat.title))
                 )
                 
         if settings["auto_delete"]:
-            await asyncio.sleep(300)
+            await asyncio.sleep(60)
             await (temp.MELCOW['welcome']).delete()
                 
                
@@ -82,12 +76,13 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙾𝚆𝙽𝙴𝚁', url=f"https://t.me/Srikanth_Official_Bot")
+            InlineKeyboardButton('Support', url=f"https://t.me/{SUPPORT_CHAT}"),
+            InlineKeyboardButton('Groups', url=f"https://t.me/GM_GROUPS")
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat,
-            text='<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my OWNER.</b>',
+            text='<b>Hello Friends, \nMy admin has told me to leave from group so i go! If you wanna add me again contact my 𝖲𝖴𝖯𝖯𝖮𝖱𝖳 GROUP.</b>',
             reply_markup=reply_markup,
         )
 
@@ -121,12 +116,13 @@ async def disable_chat(bot, message):
     await message.reply('Chat Successfully Disabled')
     try:
         buttons = [[
-            InlineKeyboardButton('𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙾𝚆𝙽𝙴𝚁', url=f"https://t.me/Srikanth_Official_Bot")
+            InlineKeyboardButton('Support', url=f"https://t.me/{SUPPORT_CHAT}"),
+            InlineKeyboardButton('Groups', url=f"https://t.me/GM_GROUPS")
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await bot.send_message(
             chat_id=chat_, 
-            text=f'<b>𝖧𝖾𝗅𝗅𝗈 𝖥𝗋𝗂𝖾𝗇𝖽𝗌, \n𝖬𝗒 𝖺𝖽𝗆𝗂𝗇 𝗁𝖺𝗌 𝗍𝗈𝗅𝖽 𝗆𝖾 𝗍𝗈 𝗅𝖾𝖺𝗏𝖾 𝖿𝗋𝗈𝗆 𝗀𝗋𝗈𝗎𝗉 𝗌𝗈 𝗂 𝗀𝗈! 𝖨𝖿 𝗒𝗈𝗎 𝗐𝖺𝗇𝗇𝖺 𝖺𝖽𝖽 𝗆𝖾 𝖺𝗀𝖺𝗂𝗇 𝖼𝗈𝗇𝗍𝖺𝖼𝗍 𝗆𝗒 OWNER.\n</b> \nReason : <code>{reason}</code>',
+            text=f'<b>𝖧𝖾𝗅𝗅𝗈 𝖥𝗋𝗂𝖾𝗇𝖽𝗌, \n𝖬𝗒 𝖺𝖽𝗆𝗂𝗇 𝗁𝖺𝗌 𝗍𝗈𝗅𝖽 𝗆𝖾 𝗍𝗈 𝗅𝖾𝖺𝗏𝖾 𝖿𝗋𝗈𝗆 𝗀𝗋𝗈𝗎𝗉 𝗌𝗈 𝗂 𝗀𝗈! 𝖨𝖿 𝗒𝗈𝗎 𝗐𝖺𝗇𝗇𝖺 𝖺𝖽𝖽 𝗆𝖾 𝖺𝗀𝖺𝗂𝗇 𝖼𝗈𝗇𝗍𝖺𝖼𝗍 𝗆𝗒 𝗌𝗎𝗉𝗉𝗈𝗋𝗍 𝗀𝗋𝗈𝗎𝗉.</b> \nReason : <code>{reason}</code>',
             reply_markup=reply_markup)
         await bot.leave_chat(chat_)
     except Exception as e:
@@ -234,7 +230,7 @@ async def unban_a_user(bot, message):
     except PeerIdInvalid:
         return await message.reply("This is an invalid user, make sure ia have met him before.")
     except IndexError:
-        return await message.reply("This might be a channel, make sure its a user.")
+        return await message.reply("Thismight be a channel, make sure its a user.")
     except Exception as e:
         return await message.reply(f'Error - {e}')
     else:
