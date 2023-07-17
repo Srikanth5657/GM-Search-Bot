@@ -28,11 +28,15 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 BOT_START_TIME = time()
 
+# url shortner
+SHORT_URL = environ.get("SHORT_URL", "onepagelink.in")
+SHORT_API = environ.get("SHORT_API", "c075b483992784084270b6365b00fce87c4a13ab")
+
 # Bot images & videos
 PICS = (environ.get('PICS', 'https://te.legra.ph/file/26e43e68d3cd6536b0603.jpg https://te.legra.ph/file/7a2642bc6f0a0b987eb8e.jpg https://te.legra.ph/file/20a8c2563bec0b9d92f35.jpg https://te.legra.ph/file/d150a25376b74ae604218.jpg https://te.legra.ph/file/839c4b37341d83a8c75ad.jpg https://te.legra.ph/file/1c2a4d97d2a78296b2110.jpg https://te.legra.ph/file/add084ad0a9bd117d40f0.jpg https://te.legra.ph/file/1b20ce7ed6e6d26404fd1.jpg https://te.legra.ph/file/8d04fe97aeb9018cf7b66.jpg https://te.legra.ph/file/fc960203396e0f8e084fa.jpg https://te.legra.ph/file/a8625f0dc3857d3cdda50.jpg')).split()
 REQ_PICS = (environ.get('REQ_PICS', '')).split()
 NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/0593a3103ba1b9a5855bf.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "")
+MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/72dff2b65352ba85d0a34.mp4")
 SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/2a888a370f479f4338f7c.jpg")
 
 # Admins, Channels & Users
@@ -47,8 +51,7 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID')
 reqst_channel = environ.get('REQST_CHANNEL_ID')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
-SUPPORT_CHAT_ID = -1001379487479
-SHORTLINK = is_enabled((environ.get('SHORTLINK', "True")), True)
+SUPPORT_CHAT_ID = -1001919828287
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
 
 # MongoDB information
@@ -61,23 +64,21 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 MAX_B_TN = environ.get("MAX_B_TN", "10")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'GeethaMovies')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'gm_discussion')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "True")), True)
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '<code>{file_name}</code> \n\n<b>File Size : {file_size}</b>\n\n<b>Join : </b> [𝗚𝗲𝗲𝘁𝗵𝗮𝗠𝗼𝘃𝗶𝗲𝘀](https://t.me/GeethaMovies)')
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", '<code>{file_name}</code> \n\n<b>File Size : {file_size}</b>\n\n<b>Join : @GeethaMovies😏 </b>')
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", '')
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", '🏷 𝖳𝗂𝗍𝗅𝖾: <a href={url}>{title}</a> \n🔮 𝖸𝖾𝖺𝗋: {year} \n⭐️ 𝖱𝖺𝗍𝗂𝗇𝗀𝗌: {rating}/ 10  \n🎭 𝖦𝖾𝗇𝖾𝗋𝗌: {genres} \n\n🎊 𝖯𝗈𝗐𝖾𝗋𝖾𝖽 𝖡𝗒 [[GeethaMovies]](t.me/GeethaMovies)')
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "omegalinks.in")
-SHORTLINK_API = environ.get("SHORTLINK_API", "ccfa287d222b9d943922057dec4bf5091d6446ad")
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
-MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
+MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
 
