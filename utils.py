@@ -1,6 +1,6 @@
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
-from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, CUSTOM_FILE_CAPTION
+from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, CUSTOM_FILE_CAPTION, SHORT_URL, SHORT_API
 from imdb import Cinemagoer 
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
@@ -9,6 +9,7 @@ from typing import Union
 import random 
 import re
 import os
+import aiohttp
 from datetime import datetime
 from typing import List
 from database.users_chats_db import db
@@ -29,7 +30,7 @@ SMART_OPEN = '“'
 SMART_CLOSE = '”'
 START_CHAR = ('\'', '"', SMART_OPEN)
 
-# # temp db for banned 
+# temp db for banned 
 class temp(object):
     BANNED_USERS = []
     BANNED_CHATS = []
@@ -196,6 +197,26 @@ async def save_group_settings(group_id, key, value):
     current[key] = value
     temp.SETTINGS[group_id] = current
     await db.update_settings(group_id, current)
+
+async def get_shortlink(link):
+
+    url = f'{SHORT_URL}/api'
+    params = {
+      'api': SHORT_API,
+      'url': link,
+    }
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
+                data = await response.json()
+                if data["status"] == "success":
+                    return data['shortenedUrl']
+                else:
+                    logger.error(f"Error: {data['message']}")
+                    return link
+    except Exception as e:
+        logger.error(e)
+        return link
     
 def get_size(size):
     """Get size in readable format"""
@@ -466,5 +487,5 @@ async def send_all(bot, userid, files, ident):
             chat_id=userid,
             file_id=file.file_id,
             caption=f_caption,
-            protect_content=True if ident == "filep" else False,
-            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ 𝖯𝖨𝖱𝖮 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚔️', url="https://t.me/piroxbots") ] ] ))
+            protect_content=True if ident == "filep" else False
+        )
