@@ -1316,7 +1316,7 @@ async def auto_filter(client, msg, spoll=False):
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_markup=InlineKeyboardMarkup(btn))
             try:
                 if settings['auto_delete']:
-                    await asyncio.sleep(8600)
+                    await asyncio.sleep(86000)
                     await hehe.delete()
                     await message.delete()
             except KeyError:
