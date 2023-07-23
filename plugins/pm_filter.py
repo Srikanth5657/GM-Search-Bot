@@ -1220,8 +1220,7 @@ async def auto_filter(client, msg, spoll=False):
             if not files:
                 await client.send_message(chat_id=REQST_CHANNEL,f"-🦋 #REQUESTED_CONTENT 🦋-\n\n📝**Content Name** :`{search}`\n**Requested By**: {message.from_user.first_name}\n **USER ID**:{user_id}\n\n🗃️",
                                                                                                        reply_markup=InlineKeyboardMarkup([
-                                                                                                                                        [InlineKeyboardButton(text=f"✅Upload Done", callback_data=f"close_data")]]
-                                                                                                           ))
+                                                                                                                                        [InlineKeyboardButton(text=f"✅Upload Done", callback_data=f"close_data")]]))
                 await asyncio.sleep(20)
                 await l.delete()
                 if settings["spell_check"]:
