@@ -1407,7 +1407,12 @@ async def advantage_spell_chok(client, msg):
         InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ​ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")            
         ]]
         if NO_RESULTS_MSG:
-            await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)),reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data")]]))
+            await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)),reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data"),[[
+                InlineKeyboardButton("⚠ 𝖴𝗇𝖺𝗏𝖺𝗂𝖺𝗅𝖺𝖻𝗅𝖾 ⚠", callback_data=f"unavailable#{from_user}"),
+                InlineKeyboardButton("✅ 𝖴𝗉𝗅𝗈𝖺𝖽𝖾𝖽 ✅", callback_data=f"uploaded#{from_user}")
+             ],[
+                InlineKeyboardButton("🔰 𝖠𝗅𝗋𝖾𝖺𝖽𝗒 𝖠𝗏𝖺𝗂𝗅𝖺𝖻𝗅𝖾 🔰", callback_data=f"already_available#{from_user}")
+              ]]]]))
   
         k = await msg.reply_text(
             text=("<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ\n\nᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ !!</b>"),
@@ -1424,7 +1429,12 @@ async def advantage_spell_chok(client, msg):
         InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ​ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")   
         ]]
         if NO_RESULTS_MSG:
-            await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)),reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data")]]))
+            await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)),reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data"),[[
+                InlineKeyboardButton("⚠ 𝖴𝗇𝖺𝗏𝖺𝗂𝖺𝗅𝖺𝖻𝗅𝖾 ⚠", callback_data=f"unavailable#{from_user}"),
+                InlineKeyboardButton("✅ 𝖴𝗉𝗅𝗈𝖺𝖽𝖾𝖽 ✅", callback_data=f"uploaded#{from_user}")
+             ],[
+                InlineKeyboardButton("🔰 𝖠𝗅𝗋𝖾𝖺𝖽𝗒 𝖠𝗏𝖺𝗂𝗅𝖺𝖻𝗅𝖾 🔰", callback_data=f"already_available#{from_user}")
+              ]]]]))
         k = await msg.reply_text(
             text=("<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ\n\nᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ !!</b>"),
             reply_markup=InlineKeyboardMarkup(button),
