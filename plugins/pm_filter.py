@@ -230,10 +230,7 @@ async def advantage_spoll_choker(bot, query):
                 reqstr1 = query.from_user.id if query.from_user else 0
                 reqstr = await bot.get_users(reqstr1)
                 if NO_RESULTS_MSG:
-                    await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)),reply_markup=InlineKeyboardMarkup(
-                                                                                                                                        [InlineKeyboardButton(text=f"✅Upload Done", callback_data=f"uploaded#{from_user}")],
-                                                                                                                                        [InlineKeyboardButton(text=f"⚡Already Upl..", callback_data=f"already_available#{from_user}")],
-                                                                                                                                        [InlineKeyboardButton(text=f"😒Not Available", callback_data=f"unavailable#{from_user}")]))
+                    await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)),reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data")]]))
                 return await pm_spoll_choker(msg)              
                 k = await query.message.edit(script.MVE_NT_FND)
                 await asyncio.sleep(10)
@@ -807,9 +804,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_reply_markup(reply_markup)
             await query.answer("𝖲𝖾𝗍 𝗍𝗈 𝖺𝗅𝗋𝖾𝖺𝖽𝗒 𝖺𝗏𝖺𝗂𝗅𝖺𝖻𝗅𝖾 !")
             try:
-                await client.send_message(chat_id=int(from_user), text=f"<b>𝖧𝖾𝗒 {user.mention}, 𝖸𝗈𝗎𝗋 𝗋𝖾𝗊𝗎𝖾𝗌𝗍 𝗂𝗌 𝖺𝗅𝗋𝖾𝖺𝖽𝗒 𝖺𝗏𝖺𝗂𝗅𝖺𝖻𝗅𝖾 𝗈𝗇 𝖡𝗈𝗍. 𝖪𝗂𝗇𝖽𝗅𝗒 𝗌𝖾𝖺𝗋𝖼𝗁 𝖺𝗀𝖺𝗂𝗇 @blaster_arena & @GeethaMovies !</b>", reply_markup=InlineKeyboardMarkup(btn2))
+                await client.send_message(chat_id=int(from_user), text=f"<b>𝖧𝖾𝗒 {user.mention}, 𝖸𝗈𝗎𝗋 𝗋𝖾𝗊𝗎𝖾𝗌𝗍 𝗂𝗌 𝖺𝗅𝗋𝖾𝖺𝖽𝗒 𝖺𝗏𝖺𝗂𝗅𝖺𝖻𝗅𝖾 𝗈𝗇 𝖡𝗈𝗍. 𝖪𝗂𝗇𝖽𝗅𝗒 𝗌𝖾𝖺𝗋𝖼𝗁 𝖺𝗀𝖺𝗂𝗇 @GeethaMovies !</b>", reply_markup=InlineKeyboardMarkup(btn2))
             except UserIsBlocked:
-                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>𝖧𝖾𝗒 {user.mention}, 𝖸𝗈𝗎𝗋 𝗋𝖾𝗊𝗎𝖾𝗌𝗍 𝗂𝗌 𝖺𝗅𝗋𝖾𝖺𝖽𝗒 𝖺𝗏𝖺𝗂𝗅𝖺𝖻𝗅𝖾 𝗈𝗇 𝖡𝗈𝗍. 𝖪𝗂𝗇𝖽𝗅𝗒 𝗌𝖾𝖺𝗋𝖼𝗁 𝖺𝗀𝖺𝗂𝗇 @blaster_arena & @GeethaMovies !\n\n📝 𝖭𝗈𝗍𝖾: 𝖳𝗁𝗂𝗌 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗂𝗌 𝗌𝖾𝗇𝗍 𝗂𝗇 𝖦𝗋𝗈𝗎𝗉 𝖻𝖾𝖼𝖺𝗎𝗌𝖾 𝗒𝗈𝗎 𝗁𝖺𝗏𝖾 𝖡𝗅𝗈𝖼𝗄𝖾𝖽 𝗍𝗁𝖾 𝖡𝗈𝗍 ! 𝖴𝗇𝖻𝗅𝗈𝖼𝗄 𝗍𝗁𝖾 𝖡𝗈𝗍 !</b>", reply_markup=InlineKeyboardMarkup(btn2))
+                await client.send_message(chat_id=int(SUPPORT_CHAT_ID), text=f"<b>𝖧𝖾𝗒 {user.mention}, 𝖸𝗈𝗎𝗋 𝗋𝖾𝗊𝗎𝖾𝗌𝗍 𝗂𝗌 𝖺𝗅𝗋𝖾𝖺𝖽𝗒 𝖺𝗏𝖺𝗂𝗅𝖺𝖻𝗅𝖾 𝗈𝗇 𝖡𝗈𝗍. 𝖪𝗂𝗇𝖽𝗅𝗒 𝗌𝖾𝖺𝗋𝖼𝗁 𝖺𝗀𝖺𝗂𝗇 @GeethaMovies !\n\n📝 𝖭𝗈𝗍𝖾: 𝖳𝗁𝗂𝗌 𝗆𝖾𝗌𝗌𝖺𝗀𝖾 𝗂𝗌 𝗌𝖾𝗇𝗍 𝗂𝗇 𝖦𝗋𝗈𝗎𝗉 𝖻𝖾𝖼𝖺𝗎𝗌𝖾 𝗒𝗈𝗎 𝗁𝖺𝗏𝖾 𝖡𝗅𝗈𝖼𝗄𝖾𝖽 𝗍𝗁𝖾 𝖡𝗈𝗍 ! 𝖴𝗇𝖻𝗅𝗈𝖼𝗄 𝗍𝗁𝖾 𝖡𝗈𝗍 !</b>", reply_markup=InlineKeyboardMarkup(btn2))
         else:
             await query.answer("𝖸𝗈𝗎 𝖽𝗈𝗇'𝗍 𝗁𝖺𝗏𝖾 𝗌𝗎𝖿𝖿𝗂𝖼𝗂𝖾𝗇𝗍 𝗋𝗂𝗀𝗁𝗍𝗌 𝗍𝗈 𝖽𝗈 𝗍𝗁𝗂𝗌 !", show_alert=True)
 
@@ -1224,10 +1221,7 @@ async def auto_filter(client, msg, spoll=False):
                     return await advantage_spell_chok(client, msg)
                 else:
                     if NO_RESULTS_MSG:
-                        await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, search)),reply_markup=InlineKeyboardMarkup(
-                                                                                                                                        [InlineKeyboardButton(text=f"✅Upload Done", callback_data=f"uploaded#{from_user}")],
-                                                                                                                                        [InlineKeyboardButton(text=f"⚡Already Upl..", callback_data=f"already_available#{from_user}")],
-                                                                                                                                        [InlineKeyboardButton(text=f"😒Not Available", callback_data=f"unavailable#{from_user}")]))
+                        await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)),reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data")]]))
                     return
         else:
             return
@@ -1404,11 +1398,7 @@ async def advantage_spell_chok(client, msg):
         InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ​ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")            
         ]]
         if NO_RESULTS_MSG:
-            await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)),reply_markup=InlineKeyboardMarkup(
-                                                                                                                                        [InlineKeyboardButton(text=f"✅Upload Done", callback_data=f"uploaded#{from_user}")],
-                                                                                                                                        [InlineKeyboardButton(text=f"⚡Already Upl..", callback_data=f"already_available#{from_user}")],
-                                                                                                                                        [InlineKeyboardButton(text=f"😒Not Available", callback_data=f"unavailable#{from_user}")]))
-  
+            await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)),reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data")]]))
         k = await msg.reply_text(
             text=("<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ\n\nᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ !!</b>"),
             reply_markup=InlineKeyboardMarkup(button),
@@ -1424,10 +1414,7 @@ async def advantage_spell_chok(client, msg):
         InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ ᴏɴ ɢᴏᴏɢʟᴇ​ 🔎', url=f"https://www.google.com/search?q={reqst_gle}")   
         ]]
         if NO_RESULTS_MSG:
-            await client.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, mv_rqst)),reply_markup=InlineKeyboardMarkup(
-                                                                                                                                        [InlineKeyboardButton(text=f"✅Upload Done", callback_data=f"uploaded#{from_user}")],
-                                                                                                                                        [InlineKeyboardButton(text=f"⚡Already Upl..", callback_data=f"already_available#{from_user}")],
-                                                                                                                                        [InlineKeyboardButton(text=f"😒Not Available", callback_data=f"unavailable#{from_user}")]))
+            await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)),reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🦋 Mark As Done 🦋", callback_data="close_data")]]))
             return await pm_spoll_choker(msg)              
         k = await msg.reply_text(
             text=("<b>sᴏʀʀʏ ɴᴏ ꜰɪʟᴇs ᴡᴇʀᴇ ꜰᴏᴜɴᴅ\n\nᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴘᴇʟʟɪɴɢ ɪɴ ɢᴏᴏɢʟᴇ ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ !!</b>"),
