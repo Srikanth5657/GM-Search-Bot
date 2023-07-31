@@ -521,7 +521,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             file_id=file_id,
             caption=f_caption,
             protect_content=True if ident == 'checksubp' else False,
-        ) 
+            reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/GM_MOVIE_REQUEST") ] ] )
+        )
     elif query.data == "pages":
         await query.answer()
 
