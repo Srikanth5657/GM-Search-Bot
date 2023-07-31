@@ -146,7 +146,8 @@ async def start(client, message):
                 file_id=file.file_id,
                 caption=f_caption,
                 protect_content=True if pre == 'filep' else False,
-            )
+                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/GM_MOVIE_REQUEST") ] ] ))
+            
         return
     
     if data.split("-", 1)[0] == "BATCH":
@@ -180,8 +181,8 @@ async def start(client, message):
                     chat_id=message.from_user.id,
                     file_id=msg.get("file_id"),
                     caption=f_caption,
-                    protect_content=msg.get('protect', False), 
-                )
+                    protect_content=msg.get('protect', False),
+                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/GM_MOVIE_REQUEST") ] ] ))
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
@@ -190,6 +191,7 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     protect_content=msg.get('protect', False),
+                    reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/GM_MOVIE_REQUEST") ] ] )
                 )
             except Exception as e:
                 logger.warning(e, exc_info=True)
@@ -251,6 +253,7 @@ async def start(client, message):
                 chat_id=message.from_user.id,
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
+                reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/GM_MOVIE_REQUEST") ] ] )
             )
             filetype = msg.media
             file = getattr(msg, filetype.value)
@@ -284,6 +287,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('𝗠𝗮𝗶𝗻 𝗚𝗿𝗼𝘂𝗽', url="https://t.me/GM_MOVIE_REQUEST") ] ] )
     )
                     
 
